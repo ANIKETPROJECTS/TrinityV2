@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: 'DM Sans', sans-serif;
+  --font-display: 'Barlow Condensed', sans-serif;
+
+  /* Trinity Packaging Brand Colors */
+  --color-background: hsl(180 20% 97%); /* #F7FAFA */
+  --color-foreground: hsl(0 0% 10%); /* #1A1A1A */
+  
+  --color-primary: hsl(163 71% 35%); /* #1A9B7B (Teal-green) */
+  --color-primary-foreground: hsl(0 0% 100%);
+  
+  --color-secondary: hsl(160 40% 94%); /* #E8F5F1 (Light Green Tint) */
+  --color-secondary-foreground: hsl(162 79% 24%); /* Dark Green for contrast */
+  
+  --color-accent: hsl(162 79% 24%); /* #0D6E57 (Dark Green) */
+  --color-accent-foreground: hsl(0 0% 100%);
+  
+  --color-muted: hsl(160 20% 90%);
+  --color-muted-foreground: hsl(0 0% 40%);
+  
+  --color-border: hsl(160 20% 85%);
+  --color-input: hsl(160 20% 85%);
+  --color-ring: hsl(163 71% 35%);
+  
+  --color-card: hsl(0 0% 100%);
+  --color-card-foreground: hsl(0 0% 10%);
+
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+}
+
+:root {
+  --background: 180 20% 97%;
+  --foreground: 0 0% 10%;
+  --primary: 163 71% 35%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 160 40% 94%;
+  --secondary-foreground: 162 79% 24%;
+  --accent: 162 79% 24%;
+  --accent-foreground: 0 0% 100%;
+  --muted: 160 20% 90%;
+  --muted-foreground: 0 0% 40%;
+  --border: 160 20% 85%;
+  --input: 160 20% 85%;
+  --ring: 163 71% 35%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 10%;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased font-sans overflow-x-hidden selection:bg-primary/20 selection:text-primary;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply font-bold tracking-wider uppercase text-foreground;
+  }
+}
+
+/* Custom utility for premium shadows */
+@layer utilities {
+  .shadow-premium {
+    box-shadow: 0 10px 40px -10px rgba(26, 155, 123, 0.08), 0 4px 10px -4px rgba(0, 0, 0, 0.04);
+  }
+  .shadow-premium-hover {
+    box-shadow: 0 20px 50px -10px rgba(26, 155, 123, 0.15), 0 8px 20px -8px rgba(0, 0, 0, 0.08);
+  }
+}

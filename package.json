@@ -1,0 +1,19 @@
+{
+  "name": "workspace",
+  "version": "0.0.0",
+  "license": "MIT",
+  "workspaces": [
+    "artifacts/*",
+    "lib/*",
+    "scripts"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace=@workspace/trinity-packaging && npm run build --workspace=@workspace/api-server",
+    "typecheck": "tsc --build"
+  },
+  "private": true,
+  "devDependencies": {
+    "typescript": "~5.9.2",
+    "prettier": "^3.8.1"
+  }
+}

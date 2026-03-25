@@ -1,0 +1,13 @@
+[build]
+  command = "pnpm install && pnpm --filter @workspace/trinity-packaging run build"
+  publish = "artifacts/trinity-packaging/dist/public"
+
+[build.environment]
+  NODE_VERSION = "20"
+  BASE_PATH = "/"
+  NODE_ENV = "production"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

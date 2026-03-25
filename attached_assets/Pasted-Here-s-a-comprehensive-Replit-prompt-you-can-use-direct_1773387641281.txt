@@ -1,0 +1,240 @@
+Here's a comprehensive Replit prompt you can use directly:
+
+---
+
+**REPLIT PROMPT — Trinity Packaging Single Page Website**
+
+---
+
+Build a fully responsive, single-page website for **Trinity Packaging**, a corrugation and packaging manufacturing company based in Vilholi, Nashik, Maharashtra, India. The website should look **premium, clean, and professional** with a refined industrial aesthetic. Every section must have **smooth lazy scroll-triggered animations** (fade-in, slide-up, stagger effects) as the user scrolls down.
+
+---
+
+**BRAND & COLOR THEME**
+- Primary Green: `#1A9B7B` (teal-green, similar to emerald/jade)
+- Dark Green: `#0D6E57`
+- Light Green Tint: `#E8F5F1`
+- White: `#FFFFFF`
+- Off-white background: `#F7FAFA`
+- Dark text: `#1A1A1A`
+- Use Google Fonts — pair **"Barlow Condensed"** (bold, uppercase for headings) with **"DM Sans"** (clean for body text)
+- All section headings should use the green color
+- CTA buttons: solid green with white text, rounded, with hover scale effect
+
+---
+
+**IMAGE FOLDER STRUCTURE**
+Create an `/images` folder and use the following dummy placeholder images (all from `https://placehold.co` with appropriate sizes and labels). Name them exactly as listed so the client can replace them later:
+
+- `/images/hero-bg.jpg` — hero background (1920×1080)
+- `/images/about-company.jpg` — about section factory/team photo (800×600)
+- `/images/product-tab-lock-roll-end.jpg` — product image (400×300)
+- `/images/product-roll-end-3-flaps-tuck.jpg` — product image (400×300)
+- `/images/product-roll-end-tuck-front.jpg` — product image (400×300)
+- `/images/product-one-piece-folder-box.jpg` — product image (400×300)
+- `/images/product-tuck-top-auto-bottom.jpg` — product image (400×300)
+- `/images/product-regular-slotted-box.jpg` — product image (400×300)
+- `/images/product-full-slotted-box.jpg` — product image (400×300)
+- `/images/product-half-slotted-container.jpg` — product image (400×300)
+- `/images/product-gusset-folder.jpg` — product image (400×300)
+- `/images/machine-corrugation.jpg` — machine photo (800×500)
+- `/images/machine-sheet-cutting.jpg` — machine photo (400×300)
+- `/images/machine-sheet-pasting.jpg` — machine photo (400×300)
+- `/images/machine-slitting-creasing.jpg` — machine photo (400×300)
+- `/images/machine-rs4.jpg` — machine photo (400×300)
+- `/images/machine-box-stitching.jpg` — machine photo (400×300)
+- `/images/machine-paper-die-cutting.jpg` — machine photo (400×300)
+- `/images/corrugated-box-1.jpg` — product photo (500×400)
+- `/images/corrugated-box-2.jpg` — product photo (500×400)
+
+---
+
+**NAVIGATION BAR**
+- Fixed top navbar, white background with subtle shadow on scroll
+- Logo text: **TRINITY PACKAGING** in bold green (left side) — use styled text since no image logo yet; placeholder for logo image at `/images/logo.png`
+- Nav links (smooth scroll): Home | About | Why Us | Products | Services | Team | Contact
+- On mobile: hamburger menu
+
+---
+
+**SECTION 1 — HERO**
+- Full-screen hero with dark overlay on `/images/hero-bg.jpg`
+- Big bold white headline: **"Packaging That Protects. Quality That Speaks."**
+- Subtext: *"Manufacturers of Premium Corrugated Boxes & Duplex Cartons — Vilholi, Nashik"*
+- Two CTA buttons: **"Explore Products"** (green filled) and **"Contact Us"** (white outlined)
+- Animated text entrance on load (stagger fade-in from bottom)
+- Subtle green geometric accent shape in corner
+
+---
+
+**SECTION 2 — ABOUT US**
+- Two-column layout: left = text, right = image (`/images/about-company.jpg`)
+- Section tag: "WHO WE ARE" in small green uppercase label
+- Heading: **"About Trinity Packaging"**
+- Body text:
+  > Trinity Packaging is a growing corrugation and packaging manufacturing company established in March 2026, located at Vilholi, Nashik — one of Maharashtra's emerging industrial hubs. We specialize in manufacturing high-quality corrugated boxes and duplex cartons that meet the packaging needs of diverse industries.
+  >
+  > Our facility is equipped with modern semi-automatic Chinese machinery, enabling efficient production, consistent quality, and timely delivery. We focus on providing durable, cost-effective, and customized packaging solutions that ensure product safety during storage and transportation.
+  >
+  > Driven by a customer-centric approach, Trinity Packaging emphasizes quality control, operational efficiency, and long-term business relationships. With a skilled workforce, professional management, and strong market orientation, we aim to become a reliable packaging partner for small, medium, and large enterprises across the region.
+- Animate: text slides in from left, image fades in from right on scroll
+
+---
+
+**SECTION 3 — WHY CHOOSE US**
+- Light green tint background (`#E8F5F1`)
+- Centered heading: **"Why Choose Us"**
+- Intro paragraph:
+  > At Trinity Packaging, we believe packaging is more than protection — it is a reflection of quality, reliability, and brand value. Our manufacturing processes are designed to deliver consistent performance while maintaining cost efficiency for our customers. We combine modern machinery, skilled manpower, and disciplined operations to meet evolving market demands. Our strategic location in Nashik enables faster logistics and better service to nearby industrial clusters.
+- Below: 5 feature cards in a row (icon + title + short text), staggered animation:
+  1. 🏅 **Consistent Quality** — Strict supervision at every production stage
+  2. 📦 **Custom Solutions** — Packaging tailored to your exact specifications
+  3. 💰 **Competitive Pricing** — Cost-effective with reliable delivery timelines
+  4. 👨‍💼 **Expert Management** — Professional team with dedicated customer support
+  5. 🔄 **Scalable Capacity** — Ready for bulk and repeat orders of all sizes
+
+---
+
+**SECTION 4 — OUR PRODUCTS**
+- White background
+- Heading: **"Our Products"**
+- Subheading: *"A wide range of corrugated and duplex carton solutions"*
+- 3×3 grid of product cards, each with:
+  - Product image (from `/images/product-*.jpg`)
+  - Product name in bold
+  - Subtle green border on hover with lift shadow
+- Products to display:
+  1. Tab Lock Roll End
+  2. Roll End 3 Flaps Tuck
+  3. Roll End Tuck Front
+  4. One Piece Folder Box
+  5. Tuck Top Auto Bottom
+  6. Regular Slotted Box
+  7. Full Slotted Box
+  8. Half Slotted Container
+  9. Gusset Folder
+- Staggered card entrance animation on scroll
+
+---
+
+**SECTION 5 — OUR SERVICES**
+- Dark section (dark green `#0D6E57`) with white text for contrast
+- Heading: **"Our Services"**
+- Three service columns with icons:
+
+  **Corrugated Packaging Services**
+  - 3-Ply and 5-Ply Corrugated Box Manufacturing
+  - Plain and Printed Corrugated Boxes
+  - Regular Slotted Containers (RSC)
+  - Customized Corrugated Packaging Solutions
+
+  **Duplex Carton Services**
+  - Duplex Cartons (Grey Back / White Back)
+  - Printed Duplex Cartons
+  - Die-Cut and Folding Cartons
+  - Retail and Shelf-Display Packaging
+
+  **Value-Added Services**
+  - Custom size and strength optimization
+  - Branding and logo printing
+  - Bulk order and repeat supply support
+  - Packaging consultation based on product requirement
+
+- Each column: white card with subtle transparency, icon at top, title in green, list below
+- Staggered slide-up animation on scroll
+
+---
+
+**SECTION 6 — OUR INFRASTRUCTURE**
+- Off-white background
+- Two-column: left = text + stats, right = machine images grid
+- Heading: **"Our Infrastructure"**
+- Text:
+  > Our manufacturing unit at Vilholi, Nashik is supported by a well-planned infrastructure designed for smooth and efficient operations. The facility includes a material inward and outward storage area with proper documentation and inventory control systems. We operate with 10+ semi-automatic machines that support corrugation, cutting, printing, and finishing processes. We have a dedicated office space accommodating 15+ employees ensuring effective coordination between production, accounts, marketing, and supervision.
+- Three stat counters (animate on scroll):
+  - **10+** Machines
+  - **15+** Employees
+  - **2026** Est. Year
+- Right side: 2×2 image grid of machines using `/images/machine-corrugation.jpg`, `/images/machine-slitting-creasing.jpg`, `/images/machine-rs4.jpg`, `/images/machine-sheet-cutting.jpg`
+
+---
+
+**SECTION 7 — OUR MACHINES**
+- White background
+- Heading: **"Our Machines"**
+- Horizontal scrollable or 3-column card grid showing all machines with images and labels:
+  - Corrugation Machine → `/images/machine-corrugation.jpg`
+  - Sheet Cutting Machine → `/images/machine-sheet-cutting.jpg`
+  - Sheet Pasting Machine → `/images/machine-sheet-pasting.jpg`
+  - Slitting and Creasing Machine → `/images/machine-slitting-creasing.jpg`
+  - RS4 Machine → `/images/machine-rs4.jpg`
+  - Box Stitching Machine → `/images/machine-box-stitching.jpg`
+  - Paper Die Cutting Machine → `/images/machine-paper-die-cutting.jpg`
+- Each card: image on top, machine name in green label badge at bottom, hover zoom effect
+
+---
+
+**SECTION 8 — OUR TEAM**
+- Light green tint background
+- Heading: **"Our Team"**
+- Intro paragraph:
+  > Trinity Packaging is powered by a dedicated and skilled team focused on quality and efficiency. Our workforce includes 12 trained production workers who manage machine operations and quality control, supported by a Production Supervisor, Marketing Executive, and Accounts Executive — all working together to ensure smooth operations, timely delivery, and customer satisfaction.
+- Role cards in a 3×2 grid with icon + label:
+  - Management Personnel
+  - Quality Management
+  - Skill Labour
+  - Technical Operator
+  - Designer
+  - Unskilled Labour
+- Cards: white background, green icon, soft shadow, hover lift
+
+---
+
+**SECTION 9 — CONTACT US**
+- Split layout: left = contact info + Google Map embed, right = contact form
+- Heading: **"Get In Touch"**
+- Contact details:
+  - 📞 Chetan Salunke: 7972805720
+  - 📞 Suresh Salunke: 9604095132 / 8805366525
+  - 📧 chetanent.666@gmail.com
+  - 📍 M.No. 776, Near Gulve College, Vilholi, Nashik – 422 010
+- Embed Google Maps with location pinned at: Vilholi, Nashik, Maharashtra
+- Contact form fields: Name, Phone Number, Email, Message, Submit button (green)
+- Form should have smooth focus animations on inputs
+
+---
+
+**FOOTER**
+- Dark green background, white text
+- Logo text + tagline: *"Quality Packaging. Reliable Partnership."*
+- Quick links: same as nav
+- Contact info repeated in brief
+- Copyright: © 2026 Trinity Packaging. All Rights Reserved.
+
+---
+
+**ANIMATIONS & INTERACTIONS (Important)**
+- Use Intersection Observer API for all scroll-triggered animations
+- Each section animates in when it enters the viewport: fade + translateY(30px) → normal
+- Cards stagger with 100ms delay between each
+- Stat counters count up when scrolled into view
+- Navbar changes style (shadow, slight bg opacity) on scroll
+- Smooth scroll for all nav links
+- Hover effects on all cards: lift shadow + green border accent
+- Page load: hero text staggers in with 200ms delay per line
+- Machine cards: image zoom on hover (scale 1.05 inside overflow hidden)
+- All transitions: `cubic-bezier(0.25, 0.46, 0.45, 0.94)` easing, 0.6s duration
+
+---
+
+**TECHNICAL REQUIREMENTS**
+- Pure HTML, CSS, and vanilla JavaScript — single `index.html` file
+- All images stored in `/images/` folder with placeholder images from `https://placehold.co`
+- Fully mobile responsive (hamburger nav on mobile, stacked layouts on small screens)
+- No external JS frameworks, only vanilla JS
+- Clean, well-commented code
+- Fast loading, no heavy libraries
+
+---
+
+That's the full prompt — paste it directly into Replit's AI and it will have everything it needs to build the complete website. Once it's done, you can swap out each placeholder image one by one from the `/images/` folder using the exact filenames listed.

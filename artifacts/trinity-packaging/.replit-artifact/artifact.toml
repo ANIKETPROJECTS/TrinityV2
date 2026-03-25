@@ -1,0 +1,43 @@
+kind = "web"
+previewPath = "/"
+title = "Trinity Packaging"
+version = "1.0.0"
+id = "artifacts/trinity-packaging"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+localPort = 5173
+name = "web"
+paths = ["/"]
+
+[services.development]
+run = "pnpm --filter @workspace/trinity-packaging run dev"
+
+[services.env]
+PORT = "5173"
+BASE_PATH = "/"
+
+[services.production]
+build = ["pnpm", "--filter", "@workspace/trinity-packaging", "run", "build"]
+publicDir = "artifacts/trinity-packaging/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[[services]]
+localPort = 3001
+name = "api"
+paths = ["/api/"]
+
+[services.development]
+run = "PORT=3001 pnpm --filter @workspace/api-server run dev"
+
+[services.env]
+PORT = "3001"
+NODE_ENV = "development"

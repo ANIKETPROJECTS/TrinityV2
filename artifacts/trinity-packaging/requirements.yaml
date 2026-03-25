@@ -1,0 +1,18 @@
+packages:
+  "framer-motion": "For premium smooth scroll animations, stagger effects, and interactive hover states"
+  "react-countup": "For the animated counting statistics in the Infrastructure section"
+  "react-hook-form": "For robust contact form state management"
+  "@hookform/resolvers": "For Zod validation integration with the contact form"
+  "zod": "For contact form schema validation"
+  "clsx": "For conditional class name merging"
+  "tailwind-merge": "For merging tailwind classes safely"
+
+images:
+  - path: "artifacts/trinity-packaging/public/images/hero-bg.png"
+    description: "Premium industrial manufacturing facility interior, focused on clean corrugated cardboard rolls and modern packaging machinery, dramatic cinematic lighting, deep shadows with subtle jade green accents"
+    aspect_ratio: "16:9"
+
+notes:
+  - This is a frontend-only SPA landing page.
+  - Form submissions are mocked (console.log) as no backend is required.
+  - Smooth scrolling is handled via native CSS `scroll-behavior: smooth`.
