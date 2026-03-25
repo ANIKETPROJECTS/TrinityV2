@@ -196,7 +196,7 @@ Create an `/images` folder and use the following dummy placeholder images (all f
 - Contact details:
   - 📞 Chetan Salunke: 7972805720
   - 📞 Suresh Salunke: 9604095132 / 8805366525
-  - 📧 chetanent.666@gmail.com
+  - 📧 Info.trinitypackaging@gmail.com
   - 📍 M.No. 776, Near Gulve College, Vilholi, Nashik – 422 010
 - Embed Google Maps with location pinned at: Vilholi, Nashik, Maharashtra
 - Contact form fields: Name, Phone Number, Email, Message, Submit button (green)

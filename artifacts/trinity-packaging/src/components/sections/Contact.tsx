@@ -97,8 +97,8 @@ export function Contact() {
                   </div>
                   <div>
                     <p className="font-bold text-foreground mb-1">Email Us</p>
-                    <a href="mailto:chetanent.666@gmail.com" className="text-primary hover:underline">
-                      chetanent.666@gmail.com
+                    <a href="mailto:Info.trinitypackaging@gmail.com" className="text-primary hover:underline">
+                      Info.trinitypackaging@gmail.com
                     </a>
                   </div>
                 </li>
