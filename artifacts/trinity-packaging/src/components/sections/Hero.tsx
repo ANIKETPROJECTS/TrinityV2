@@ -107,7 +107,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen lg:h-screen lg:min-h-[600px] flex items-center justify-center overflow-hidden"
     >
       {/* Double-buffered background videos */}
       <div className="absolute inset-0 z-0">
@@ -131,7 +131,7 @@ export function Hero() {
       </div>
 
       {/* Hero content */}
-      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl pt-20 grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_300px] xl:grid-cols-[minmax(0,1fr)_340px] gap-10 items-center">
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl pt-24 pb-32 lg:py-20 grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_300px] xl:grid-cols-[minmax(0,1fr)_340px] gap-8 lg:gap-10 items-center">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -188,7 +188,7 @@ export function Hero() {
           initial="hidden"
           animate="show"
           aria-labelledby="hero-certification-title"
-          className="hidden lg:flex w-full flex-col items-center border border-white/25 bg-black/35 px-6 py-8 text-center text-white shadow-2xl backdrop-blur-md xl:px-8 xl:py-10"
+          className="mx-auto flex w-full max-w-[420px] flex-col items-center border border-white/25 bg-black/35 px-5 py-6 text-center text-white shadow-2xl backdrop-blur-md sm:px-6 sm:py-8 lg:mx-0 lg:max-w-none lg:px-6 lg:py-8 xl:px-8 xl:py-10"
         >
           <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-full border border-primary/70 bg-primary/15 text-primary">
             <ShieldCheck aria-hidden="true" className="h-8 w-8" />
@@ -200,7 +200,7 @@ export function Hero() {
           <h2
             id="hero-certification-title"
             data-testid="text-hero-certification"
-            className="font-display text-3xl font-bold uppercase leading-tight text-white xl:text-4xl"
+            className="font-display text-2xl font-bold uppercase leading-tight text-white sm:text-3xl xl:text-4xl"
           >
             ISO 9001:2015
           </h2>
