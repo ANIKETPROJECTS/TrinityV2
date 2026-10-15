@@ -1,4 +1,4 @@
-modules = ["nodejs-24"]
+modules = ["nodejs-20", "web", "bash"]
 
 [[artifacts]]
 id = "artifacts/api-server"
@@ -51,3 +51,6 @@ timeoutMs = 20000
 [userenv.shared]
 GMAIL_USER = "Info.trinitypackaging@gmail.com"
 GMAIL_APP_PASSWORD = "abum ujty sfha aymj"
+
+[nix]
+channel = "stable-25_05"
