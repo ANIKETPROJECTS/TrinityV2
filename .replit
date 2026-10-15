@@ -1,4 +1,4 @@
-modules = ["nodejs-20", "web", "bash"]
+modules = ["nodejs-20", "web", "bash", "python-base-3.13"]
 
 [[artifacts]]
 id = "artifacts/api-server"
@@ -15,28 +15,6 @@ args = ["pnpm", "store", "prune"]
 env = { "CI" = "true" }
 
 [workflows]
-runButton = "Project"
-
-[[workflows.workflow]]
-name = "Project"
-mode = "parallel"
-author = "agent"
-
-[[workflows.workflow.tasks]]
-task = "workflow.run"
-args = "Start application"
-
-[[workflows.workflow]]
-name = "Start application"
-author = "agent"
-
-[workflows.workflow.metadata]
-outputType = "webview"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "PORT=5173 pnpm --filter @workspace/trinity-packaging run dev"
-waitForPort = 5173
 
 [agent]
 stack = "PNPM_WORKSPACE"
@@ -50,7 +28,7 @@ timeoutMs = 20000
 
 [userenv.shared]
 GMAIL_USER = "Info.trinitypackaging@gmail.com"
-GMAIL_APP_PASSWORD = "abum ujty sfha aymj"
 
 [nix]
 channel = "stable-25_05"
+packages = ["freetype", "gumbo", "harfbuzz", "jbig2dec", "libjpeg_turbo", "mupdf", "openjpeg", "swig", "xcbuild"]

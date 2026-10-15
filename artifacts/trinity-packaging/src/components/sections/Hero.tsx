@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { motion, type Variants } from "framer-motion";
+import { ArrowRight, ArrowUpRight, BadgeCheck, ShieldCheck } from "lucide-react";
 import { useState, useRef, useEffect, useCallback } from "react";
 
 const VIDEOS = [
@@ -42,6 +42,7 @@ function useTypewriter(text: string, speed = 40, startDelay = 1200, pauseAfter =
       }, pauseAfter);
       return () => clearTimeout(t);
     }
+    return undefined;
   }, [displayed, phase, text, speed, pauseAfter]);
 
   return displayed;
@@ -95,7 +96,7 @@ export function Hero() {
     show: { opacity: 1, transition: { staggerChildren: 0.15, delayChildren: 0.2 } },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     show: {
       opacity: 1, y: 0,
@@ -130,12 +131,12 @@ export function Hero() {
       </div>
 
       {/* Hero content */}
-      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl pt-20">
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl pt-20 grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_300px] xl:grid-cols-[minmax(0,1fr)_340px] gap-10 items-center">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="show"
-          className="max-w-4xl"
+          className="min-w-0 max-w-4xl"
         >
           <motion.div
             variants={itemVariants}
@@ -149,7 +150,7 @@ export function Hero() {
 
           <motion.h1
             variants={itemVariants}
-            className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white uppercase leading-[0.9] mb-8"
+            className="text-5xl md:text-7xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-display font-bold text-white uppercase leading-[0.9] mb-8"
           >
             Packaging That{" "}
             <span className="text-primary block mt-2">Protects.</span>{" "}
@@ -181,6 +182,47 @@ export function Hero() {
             </a>
           </motion.div>
         </motion.div>
+
+        <motion.aside
+          variants={itemVariants}
+          initial="hidden"
+          animate="show"
+          aria-labelledby="hero-certification-title"
+          className="hidden lg:flex w-full flex-col items-center border border-white/25 bg-black/35 px-6 py-8 text-center text-white shadow-2xl backdrop-blur-md xl:px-8 xl:py-10"
+        >
+          <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-full border border-primary/70 bg-primary/15 text-primary">
+            <ShieldCheck aria-hidden="true" className="h-8 w-8" />
+          </div>
+          <p className="mb-3 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/70">
+            <BadgeCheck aria-hidden="true" className="h-4 w-4 text-primary" />
+            Certified quality
+          </p>
+          <h2
+            id="hero-certification-title"
+            data-testid="text-hero-certification"
+            className="font-display text-3xl font-bold uppercase leading-tight text-white xl:text-4xl"
+          >
+            ISO 9001:2015
+          </h2>
+          <p className="mt-3 text-sm font-semibold uppercase tracking-wider text-primary">
+            Quality Management System
+          </p>
+          <p className="mt-5 text-sm leading-relaxed text-white/75">
+            Our manufacturing and supply of corrugated boxes and duplex cartons
+            is certified to an internationally recognized quality standard.
+          </p>
+          <a
+            href="/documents/trinity-packaging-qms-certificate.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open Trinity Packaging ISO 9001:2015 certificate PDF in a new tab"
+            data-testid="link-hero-certificate"
+            className="mt-7 inline-flex w-full items-center justify-center gap-2 border border-white/70 px-5 py-3 text-sm font-bold text-white transition-colors hover:border-primary hover:bg-primary"
+          >
+            View Certificate
+            <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
+          </a>
+        </motion.aside>
       </div>
 
       {/* Scroll indicator */}

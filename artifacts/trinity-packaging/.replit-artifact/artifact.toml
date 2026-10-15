@@ -29,15 +29,3 @@ serve = "static"
 [[services.production.rewrites]]
 from = "/*"
 to = "/index.html"
-
-[[services]]
-localPort = 3001
-name = "api"
-paths = ["/api/"]
-
-[services.development]
-run = "PORT=3001 pnpm --filter @workspace/api-server run dev"
-
-[services.env]
-PORT = "3001"
-NODE_ENV = "development"

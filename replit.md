@@ -1,5 +1,17 @@
 # Workspace
 
+## Running Trinity Packaging on Replit
+
+- Install the existing workspace dependencies with `pnpm install --frozen-lockfile`.
+- Start the managed workflow `artifacts/trinity-packaging: web` for the React/Vite website (port 5173, preview `/`).
+- Start `artifacts/api-server: API Server` for Express (port 8080, routed at `/api`). Both workflows must be running for the contact form.
+- Do not create a second frontend or API workflow: the artifact-managed workflows supply ports and routing.
+- API health check: `GET /api/healthz` returns `{"status":"ok"}`.
+- Checks: `pnpm run typecheck`, `pnpm --filter @workspace/trinity-packaging run typecheck`, and `pnpm --filter @workspace/api-server run typecheck`.
+- The current public website does not use the database package, so a database is not needed to run it.
+- Email requires `GMAIL_USER` and a Gmail app password saved securely as the `GMAIL_APP_PASSWORD` secret. The imported plain-text password was removed; revoke that exposed password and create a replacement before enabling email. Restart the API workflow after saving the secret. Never put passwords in `.replit` or source files.
+- Verify in Preview: the home page loads; Products opens a product detail page; Contact opens the inquiry form. Without email configuration, a valid inquiry returns an explicit configuration error rather than reporting success. There is no Admin panel in the imported app.
+
 ## Overview
 
 pnpm workspace monorepo using TypeScript. Each package manages its own dependencies.
@@ -56,7 +68,7 @@ Express 5 API server. Routes live in `src/routes/` and use `@workspace/api-zod` 
 
 - Entry: `src/index.ts` — reads `PORT`, starts Express
 - App setup: `src/app.ts` — mounts CORS, JSON/urlencoded parsing, routes at `/api`
-- Routes: `src/routes/index.ts` mounts sub-routers; `src/routes/health.ts` exposes `GET /health` (full path: `/api/health`)
+- Routes: `src/routes/index.ts` mounts sub-routers; `src/routes/health.ts` exposes `GET /healthz` (full path: `/api/healthz`)
 - Depends on: `@workspace/db`, `@workspace/api-zod`
 - `pnpm --filter @workspace/api-server run dev` — run the dev server
 - `pnpm --filter @workspace/api-server run build` — production esbuild bundle (`dist/index.cjs`)
